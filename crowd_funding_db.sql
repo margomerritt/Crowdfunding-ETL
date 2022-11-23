@@ -59,4 +59,21 @@ REFERENCES "category" ("category_id");
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "subcategory" ("subcategory_id");
 
-SELECT * FROM subcategory;
+DROP TABLE backers CASCADE;
+
+CREATE TABLE "backers" (
+	"backer_id" varchar(50) NOT NULL,
+	"cf_id" int NOT NULL,
+	"first_name" varchar(50) NOT NULL,
+	"last_name" varchar(50) NOT NULL,
+	"email" varchar(50) NOT NULL,
+	CONSTRAINT "pk_backers" PRIMARY KEY (
+	"backer_id")
+
+);
+
+
+
+
+
+SELECT * FROM backers;
